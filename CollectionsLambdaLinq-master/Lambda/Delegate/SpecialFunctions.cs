@@ -17,7 +17,7 @@ namespace Lambda.Delegate
      * Create a delegate called NumberCheck which returns a boolean and has a single parameter of type int
      */
 
-    public class SpecialFunctions //: IComparable<int>
+    public class SpecialFunctions 
     {
         public static double Sum(double val1, double val2)
         {
@@ -45,6 +45,14 @@ namespace Lambda.Delegate
             double result = function(param1, param2);
             Console.WriteLine(result);
         }
+        /*
+     Modified: Done
+     */
+
+        /**
+         * TODO 2: 
+         * Create a function which checks if an integer is even. The function will return True for even numbers and False for odd numbers.
+         */
 
         public static bool IsEvenNo(int x)
         {
@@ -70,7 +78,12 @@ namespace Lambda.Delegate
             return items;
            
         }
-       
+
+        /**
+         * TODO 3:
+         * Create a function called GetEvenNumbers which uses an instance of a NumberCheck delegate and an aray list of integers.
+         * The function will return a list with the even numbers.
+         */
         public static List<int> GetEvenNumbersWithFunc(Func<int,bool> function, List<int> intArray)
         {
             List<int> items = new List<int>();
@@ -102,29 +115,6 @@ namespace Lambda.Delegate
             return intArray;
         }
 
-        //int IComparable<int>.CompareTo(int other)
-        //{
-        //    int result = new int();
-
-        //    return result.CompareTo(other);
-            
-        //}
-
-
-
-        /*
-        Modified: Done
-        */
-
-        /**
-         * TODO 2: 
-         * Create a function which checks if an integer is even. The function will return True for even numbers and False for odd numbers.
-         */
-
-        /**
-         * TODO 3:
-         * Create a function called GetEvenNumbers which uses an instance of a NumberCheck delegate and an aray list of integers.
-         * The function will return a list with the even numbers.
-         */
+      
     }
 }

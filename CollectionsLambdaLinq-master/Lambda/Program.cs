@@ -22,18 +22,18 @@ namespace Lambda
 
             //Call sum function
             double sum_Result = sum_Function(val1, val2);
-            Console.WriteLine("{val1} + {val2} = {sum_Result}");
+            Console.WriteLine($"{val1} + {val2} = {sum_Result}");
 
             //Call product function
             double prod_Result = prod_Function(val1, val2);
-            Console.WriteLine("{val1} * {val2} = {prod_Result}");
+            Console.WriteLine($"{val1} * {val2} = {prod_Result}");
 
             //Using sum_function reference
-            Console.Write("{val1} + {val2} = ");
+            Console.Write($"{val1} + {val2} = ");
             SpecialFunctions.ExecuteFunction(sum_Function, val1, val2);
 
             //Using product_function reference
-            Console.Write("{0} * {1} = ", val1, val2);
+            Console.Write($"{0} * {1} = ", val1, val2);
             SpecialFunctions.ExecuteFunction(prod_Function, val1, val2);
 
 
@@ -79,22 +79,22 @@ namespace Lambda
 
             //Call sum function
             double sum_Result = sum_Function(val1, val2);
-            Console.WriteLine("{val1} + {val2} = {sum_Result}");
+            Console.WriteLine($"{val1} + {val2} = {sum_Result}");
 
             //Call product function
             double prod_Result = prod_Function(val1, val2);
-            Console.WriteLine("{val1} * {val2} = {prod_Result}");
+            Console.WriteLine($"{val1} * {val2} = {prod_Result}");
 
             //Using sum_function reference
-            Console.Write("{val1} + {val2} = ");
+            Console.Write($"{val1} + {val2} = ");
             SpecialFunctions.ExecuteFunctionUsingFunc(sum_Function, val1, val2);
 
             //Using product_function reference
-            Console.Write("{val1} * {val2} = ");
+            Console.Write($"{val1} * {val2} = ");
             SpecialFunctions.ExecuteFunctionUsingFunc(prod_Function, val1, val2);
 
             //Omitting the explicit creation of a Func instance
-            Console.Write("{val1} - {val2} = ");
+            Console.Write($"{val1} - {val2} = ");
             SpecialFunctions.ExecuteFunctionUsingFunc(SpecialFunctions.Diff, val1, val2);
 
             List<int> numbersList = new List<int>(new int[] { 0, 1, 2, 6, 8, 9, 21, 24, 10 });
@@ -195,81 +195,80 @@ namespace Lambda
 
         private static void LambdaExample()
         {
-            //    Console.WriteLine("=====Example 4 (Lambda example)=====");
+            Console.WriteLine("=====Example 4 (Lambda example)=====");
 
-            //    //Use lamba expression to create a Func delegate instance
-            //    Func<double, double, double> sum_Function = (double var1, double var2) => { return var1 + var2; };
+            //Use lamba expression to create a Func delegate instance
+            Func<double, double, double> sum_Function = (double var1, double var2) => { return var1 + var2; };
 
-            //    //Use lambda expression without data type to create a Func delegate instance
-            //    Func<double, double, double> sum_Function_withoutType = (var1, var2) => var1 + var2;
+            //Use lambda expression without data type to create a Func delegate instance
+            Func<double, double, double> sum_Function_withoutType = (var1, var2) => var1 + var2;
 
-            //    //Use lamba expression to create a delegate instance
-            //    PerformCalculation prod_Function = (double var1, double var2) => var1 * var2;
+            //Use lamba expression to create a delegate instance
+            PerformCalculation prod_Function = (double var1, double var2) => var1 * var2;
 
-            //    //Use lamba expression without data type to create a delegate instance
-            //    PerformCalculation prod_Function_withoutType = (var1, var2) => var1 * var2;
+            //Use lamba expression without data type to create a delegate instance
+            PerformCalculation prod_Function_withoutType = (var1, var2) => var1 * var2;
 
 
-            //    double val1 = 4.0, val2 = 3.0;
+            double val1 = 4.0, val2 = 3.0;
 
-            //    //Call sum function
-            //    double sum_Result = sum_Function(val1, val2);
-            //    Console.WriteLine("{val1} + {val2} = {sum_Result}");
+            //Call sum function
+            double sum_Result = sum_Function(val1, val2);
+            Console.WriteLine($"{val1} + {val2} = {sum_Result}");
 
-            //    //Call product function
-            //    double prod_Result = prod_Function(val1, val2);
-            //    Console.WriteLine("{val1} * {val2} = {prod_Result}");
+            //Call product function
+            double prod_Result = prod_Function(val1, val2);
+            Console.WriteLine($"{val1} * {val2} = {prod_Result}");
 
-            //    //Using sum_function reference
-            //    Console.Write("{val1} + {val2} = ");
-            //    SpecialFunctions.ExecuteFunctionUsingFunc(sum_Function, val1, val2);
+            //Using sum_function reference
+            Console.Write($"{val1} + {val2} = ");
+            SpecialFunctions.ExecuteFunctionUsingFunc(sum_Function, val1, val2);
 
-            //    //Using product_function reference
-            //    Console.Write("{val1} * {val2} = ");
-            //    SpecialFunctions.ExecuteFunction(prod_Function, val1, val2);
+            //Using product_function reference
+            Console.Write($"{val1} * {val2} = ");
+            SpecialFunctions.ExecuteFunction(prod_Function, val1, val2);
 
-            //    //Omitting the explicit creation of a Func instance
-            //    Console.Write("{val1} - {val2} = ");
-            //    SpecialFunctions.ExecuteFunctionUsingFunc((var1, var2) => var1 - var2, val1, val2);
+            //Omitting the explicit creation of a Func instance
+            Console.Write($"{val1} - {val2} = ");
+            SpecialFunctions.ExecuteFunctionUsingFunc((var1, var2) => var1 - var2, val1, val2);
 
-            //    //Omitting the explicit creation of a delegate instance
-            //    Console.Write("{val1} - {val2} = ");
-            //    SpecialFunctions.ExecuteFunction((var1, var2) => var1 - var2, val1, val2);
+            //Omitting the explicit creation of a delegate instance
+            Console.Write($"{val1} - {val2} = ");
+            SpecialFunctions.ExecuteFunction((var1, var2) => var1 - var2, val1, val2);
 
             List<int> numbersList = new List<int>(new int[] { 0, 1, 2, 6, 8, 9, 21, 24, 10 });
-
-
-
 
             SortNumber prod_Function_withoutTypeSort = (int var1, int var2) => {
             
                 return var1.CompareTo(var2);
             };
-
+            /**
+          * TODO 9
+          *
+          * Create a lambda expression which receives two parameters and returns the biggest number
+          * and use it to extract the biggest number from numbersList collection.
+          DONE
+            */ 
             int getBiggestNumber = SpecialFunctions.GetBiggestNumberfromList(prod_Function_withoutTypeSort, numbersList);
 
             Console.WriteLine("Biggest Number: {0} ", getBiggestNumber);
-
+            /**
+           * TODO 10 (for home)
+           * Use the lambda expression from TODO 9  to sort the collection ascending.
+          DONE
+          */
             var sorteList = SpecialFunctions.GetSortedNumberFromList(prod_Function_withoutTypeSort, numbersList);
 
             foreach(var item in sorteList)
             {
                 Console.WriteLine(item);
             }
-            /**
-             * TODO 9
-             *
-             * Create a lambda expression which receives two parameters and returns the biggest number
-             * and use it to extract the biggest number from numbersList collection.
-             */
-           
 
-           
+          
 
-            /**
-             * TODO 10 (for home)
-             * Use the lambda expression from TODO 9  to sort the collection ascending.
-             */
+
+
+
 
         }
 
